@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product CRUD (FakeStoreAPI)</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="mb-4">Product CRUD Operations (FakeStoreAPI)</h2>
+
+    <!-- Create / Update Form -->
+    <form id="createForm">
+      <div class="form-group">
+        <label for="createTitle">Title:</label>
+        <input type="text" class="form-control" id="createTitle" required />
+      </div>
+      <div class="form-group">
+        <label for="createPrice">Price:</label>
+        <input type="number" step="0.01" class="form-control" id="createPrice" required />
+      </div>
+      <div class="form-group">
+        <label for="createDescription">Description:</label>
+        <textarea class="form-control" id="createDescription" rows="2" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="createCategory">Category:</label>
+        <input type="text" class="form-control" id="createCategory" required />
+      </div>
+      <div class="form-group">
+        <label for="createImage">Image URL:</label>
+        <input type="url" class="form-control" id="createImage" required />
+      </div>
+      <button id="createBtn" type="submit" class="btn btn-primary">Create</button>
+      <button id="clearBtn" type="button" class="btn btn-secondary" style="display: none;">
+        Clear
+      </button>
+    </form>
+
+    <hr />
+
+    <!-- Products Display -->
+    <div id="itemsList"></div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="./jqcrud.js"></script>
+</body>
+</html>
