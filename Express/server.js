@@ -11,6 +11,12 @@
 const express = require("express");
 const app = express();
 const PORT = 3000;
+const expressLayouts = require("express-ejs-layouts");
+
+app.set("view engine", "ejs");
+app.use(expressLayouts);
+app.set("layout", "layout");
+
 
 //expose public folder to the browser
 //now we can access files in public folder directly
@@ -22,12 +28,20 @@ app.use(express.static("public"));
 //   res.send("Contact Us Page");
 // });
 
-app.get("/Contact-us", (req, res) => {
+app.get("/contact", (req, res) => {
   res.render("contact.ejs");
 });
 
+app.get("/about", (req, res) => {
+  res.render("about.ejs");
+});
+
+app.get("/menu", (req, res) => {
+  res.render("menu.ejs");
+});
+
 app.get("/", (req, res) => {
-  res.render("homepage.ejs")
+  res.render("homepage")
 })
 
 app.listen(PORT, () => {

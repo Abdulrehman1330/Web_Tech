@@ -1,76 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/styles.css" />
-    <title>Document</title>
-  </head>
   <body style="background-color: whitesmoke; position: relative">
-    <div class="imag"></div>
-    <div class="menu_box">
-      <div class="logobox">
-        <img
-          src="/Resources/retina-burger.png"
-          alt=""
-          width="50%"
-          height="50%"
-        />
-      </div>
-      <div>
-        <ul class="menu">
-          <li>
-            <a href="">
-              <link rel="stylesheet" href="" />
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <link rel="stylesheet" href="" />
-              About
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <link rel="stylesheet" href="" />
-              Menu & prices
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <link rel="stylesheet" href="" />
-              Contact us
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <link rel="stylesheet" href="" />
-              Buy now
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="col">
-      <img
-        src="/Resources/home_burger_slider_icons.png"
-        alt="Not Available"
-        class="img"
-      />
-      <div class="main_text">
-        <p>ORDER BURGERS</p>
-        <p>ONLINE</p>
-      </div>
 
-      <div class="button">CHECK MENU</div>
+<div class="swiper mySwiper slider_wrapper">
+    <div class="swiper-wrapper">
+        
+        <div class="swiper-slide">
+            <div class="imag" style="background-image: url('/Resources/home_burger_slider_bg.jpg');"></div>
+            
+            <div class="col">
+                <img src="/Resources/home_burger_slider_icons.png" alt="Icons" class="img" />
+                <div class="main_text">
+                    <p>ORDER BURGERS</p>
+                    <p>ONLINE</p>
+                </div>
+                <div class="button">CHECK MENU</div>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <div class="imag" style="background-image: url('/Resources/home_burger_slider_bg2.jpg');"></div>
+            
+            <div class="col">
+                <img src="/Resources/home_burger_slider_icons.png" alt="Icons" class="img" />
+                <div class="main_text">
+                    <p>ORDER BURGERS</p>
+                    <p>ONLINE</p>
+                </div>
+                <div class="button">CHECK MENU</div>
+            </div>
+        </div>
+
     </div>
+    
+    <div class="swiper-pagination"></div>
+</div>
+    
+    
     <div class="container">
       <p class="text1">BEST SELLING BURGERS</p>
       <div class="line"></div>
@@ -232,4 +196,3 @@
       </div>
     </div>
   </body>
-</html>
