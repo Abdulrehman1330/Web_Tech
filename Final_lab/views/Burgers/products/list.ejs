@@ -1,0 +1,42 @@
+<div class="" style="background-color: whitesmoke; padding: 20px;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+    <h1 class="text1" style="font-size: 36px; margin: 0; font-family: 'Arvo', serif;">All Products</h1>
+    <a href="/Burgers/products/create" class="button" style="background-color: #e3ca96; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px;">
+      Create New Product
+    </a>
+  </div>
+
+  <table style="width: 100%; border-collapse: collapse;">
+    <thead style="background-color: #311c0f; color: #e3ca96;">
+      <tr>
+        <th style="padding: 15px; text-align: left; font-family: 'Arvo', serif;">Image</th>
+        <th style="padding: 15px; text-align: left; font-family: 'Arvo', serif;">Name</th>
+        <th style="padding: 15px; text-align: left; font-family: 'Arvo', serif;">Type</th>
+        <th style="padding: 15px; text-align: left; font-family: 'Arvo', serif;">Price</th>
+        <th style="padding: 15px; text-align: left; font-family: 'Arvo', serif;">Description</th>
+        <th style="padding: 15px; text-align: left; font-family: 'Arvo', serif;">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% products.forEach(product => { %>
+        <tr style="border-bottom: 1px solid #ddd;">
+          <td style="padding: 15px;">
+            <% if (product.image) { %>
+              <img src="/images/uploaded/<%= product.image %>" alt="<%= product.name %>" width="60">
+            <% } else { %>
+              N/A
+            <% } %>
+          </td>
+          <td style="padding: 15px; font-family: 'Arvo', serif;"><%= product.name %></td>
+          <td style="padding: 15px; font-family: 'Arvo', serif;"><%= product.type %></td>
+          <td style="padding: 15px; font-family: 'Arvo', serif;">$<%= product.price %></td>
+          <td style="padding: 15px; font-family: 'Arvo', serif;"><%= product.description %></td>
+          <td style="padding: 15px;">
+            <a href="/Burgers/products/edit/<%= product._id %>" style="background-color: #e3ca96; color: white; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px; margin-right: 5px;">Edit</a>
+            <a href="/Burgers/products/delete/<%= product._id %>" style="background-color: #311c0f; color: white; text-decoration: none; padding: 8px 15px; font-size: 14px; border-radius: 5px;">Delete</a>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>

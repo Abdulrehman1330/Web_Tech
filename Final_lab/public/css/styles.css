@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.menu_box{
+    margin-top: 55px;
+    height: 90px;   
+    width: 996px;
+    background-color: rgba(49, 28, 15, 255);
+    display: flex;
+    justify-content:space-between;
+    justify-items: center;
+    justify-self: center;
+    align-items: center; 
+
+}
+.box{
+position: relative;
+  margin: 0 auto 0 auto;
+  width: 50%;
+  transition: all 0.4s ease;
+  z-index: 1000;
+}
+
+.box.stuck{
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  margin: 0 !important;
+}
+
+.menu{
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 700px;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu_box.stuck{
+    width: 100vw;
+    margin-top: 0;
+}
+.menu li{
+    display: inline;
+    font-size: 18px;
+}
+.menu li a{
+    text-decoration: none;
+    font-family: "Arvo", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #C7A87F;
+}
+.logobox{
+    padding-left: 2%;
+}
+
+.slider_wrapper {
+    margin-top: -145px;
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+}
+.subheader{
+    margin-top: -145px;
+    height: 57vh;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.swiper-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.imag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover; 
+    background-position: center;
+    z-index: -1;
+    filter: brightness(0.6); 
+}
+
+
+.col {
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;    
+    color: white;            
+    text-align: center;
+}
+.swiper-pagination {
+    position: absolute;
+    z-index: 100 !important;
+    margin-bottom: 300px;  
+    margin-left: 50px;          
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+/* 2. The dots themselves */
+.swiper-pagination-bullet {
+    width: 17px;
+    height: 17px;
+    background: #ffffff;     
+    opacity: 0.5;            
+    border-radius: 50%;
+    display: block;        
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #e0c097;     /* Beige color */
+}
+
+
+.main_text{
+    font-family: "Arvo", serif;
+    color: aliceblue;
+    font-weight: 900;
+    justify-items: center;
+    width: 42%;
+    height: 20%;
+    font-size: 55px;
+    letter-spacing: 10px;
+    margin-top: 45px;
+
+}
+.button{
+    height: 6%;
+    font-family: "Arvo";
+    font-size:  large;
+    width: 18%;
+    background-color:  #e3ca96;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+    font-weight:800;
+    letter-spacing: 2px;
+}
+.img{
+    margin-top: 100px;
+    padding-top: 30px;
+}
+.container{
+    width: 100%;
+    height: 275px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: whitesmoke;
+}
+
+.text1{
+    font-family: "Arvo", serif;
+    color: black;
+    font-weight: 600;
+    width: auto;
+    font-size: 43px;
+    letter-spacing: 6px;
+    margin-top: 62px;
+}
+.line{
+    background-color: #e3ca96;
+    width: 66%;
+    height: 4px;
+    display: flex;
+    justify-self: center;
+}
+.text2{
+    font-family: "Arvo", serif;
+    font-size: 16px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #a5a09e;
+
+}
+
+.buttons{
+    width: 25%;
+    display: flex;
+    justify-items: center;
+    background-color:whitesmoke;   
+}
+.button1{
+    display: flex;
+    width: 52%;
+    height: 41px;
+    text-decoration: none;
+    font-family: "Arvo", serif;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    margin-right: 10px;
+    background-color: white;
+}
+.container1{
+    background-color: whitesmoke;
+}
+.row1{
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 61px;
+}
+.item1{
+    width: 32%;
+    height: auto;
+    margin-right: 6px;
+}
+.item_name{
+    font-family: "Arvo", serif;
+    color: #311c0f;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.theme_color{
+    color: #CBAF78;
+}
+.item_desc{
+    font-family: "Arvo", serif;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    color: #a5a09e;
+    text-align: center;
+}
+.row2{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+.item2{
+    width: 22%;
+    height: auto;
+    margin-right: 6px;
+}
+.container2{
+    padding-bottom: 100px;
+}
+.container3{
+    padding-top: 120px;
+    padding-bottom: 70px;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+}
+.container4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.inner{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 25px;
+}
+.text_col{
+    margin-top: 30px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    justify-content: space-around;
+    gap: 15px;
+    height:500px;
+    
+}
+.button2{
+    font-family: "Arvo";
+    font-size:  14px;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #B4975E;;
+    color: white;
+    height: 40px;
+    text-decoration: none;
+}

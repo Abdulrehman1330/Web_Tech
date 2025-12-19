@@ -1,0 +1,32 @@
+<div class="" style="background-color: whitesmoke; padding: 20px;">
+  <h1 class="text1" style="font-size: 36px; margin-bottom: 20px; font-family: 'Arvo', serif;">Create New Product</h1>
+
+  <form action="/Burgers/products/create" method="POST" enctype="multipart/form-data">
+    <div style="margin-bottom: 15px;">
+      <label for="name" style="display: block; margin-bottom: 5px; color: #311c0f; font-family: 'Arvo', serif;">Product Name</label>
+      <input type="text" name="name" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" required>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+      <label for="price" style="display: block; margin-bottom: 5px; color: #311c0f; font-family: 'Arvo', serif;">Price</label>
+      <input type="text" name="price" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" required>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+      <label for="type" style="display: block; margin-bottom: 5px; color: #311c0f; font-family: 'Arvo', serif;">Type</label>
+      <input type="text" name="type" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+    </div>
+
+    <div style="margin-bottom: 15px;">
+      <label for="description" style="display: block; margin-bottom: 5px; color: #311c0f; font-family: 'Arvo', serif;">Description</label>
+      <textarea name="description" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" rows="3"></textarea>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+      <label for="image" style="display: block; margin-bottom: 5px; color: #311c0f; font-family: 'Arvo', serif;">Product Image</label>
+      <input type="file" name="image" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" accept="image/*">
+    </div>
+
+    <button type="submit" class="button" style="background-color: #e3ca96; color: white; text-decoration: none; border: none; padding: 15px 20px; border-radius: 5px;">Create Product</button>
+  </form>
+</div>
