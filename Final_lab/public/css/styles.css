@@ -33,12 +33,13 @@ position: relative;
 }
 
 .menu{
-    margin-right: 10px;
+    margin-right: 30px;
     margin-top: 10px;
-    width: 700px;
+    width: 800px;
     height: 48px;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
     justify-content: space-around;
     align-items: center;
 }
@@ -147,7 +148,7 @@ position: relative;
     height: 6%;
     font-family: "Arvo";
     font-size:  large;
-    width: 18%;
+    width: 21%;
     background-color:  #e3ca96;
     display: flex;
     justify-content: center;
@@ -305,4 +306,17 @@ position: relative;
     color: white;
     height: 40px;
     text-decoration: none;
+}
+.confirm-button{
+    width: 108px;
+    margin-top: 0px;
+}
+.cancel-button{
+    width: 95px;
+    margin-top: 0px;
+    color: red;
+}
+.cart-button{
+    width: 150px;
+    height: 45px;
 }

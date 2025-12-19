@@ -1,0 +1,98 @@
+<style>
+    .orders-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        background-color: white;
+    }
+    .orders-table th, .orders-table td {
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+        text-align: left;
+    }
+    .orders-table th {
+        background-color: #f8f8f8;
+        font-family: 'Arvo', serif;
+    }
+    .orders-table .button {
+        color: white;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        font-family: 'Arvo', serif;
+        font-size: 14px;
+        transition: background-color 0.3s;
+        display: inline-block;
+        margin-right: 5px;
+    }
+    .orders-table .confirm-button {
+        background-color: #5cb85c;
+    }
+    .orders-table .confirm-button:hover {
+        background-color: #4cae4c;
+    }
+    .orders-table .cancel-button {
+        background-color: #d9534f;
+    }
+    .orders-table .cancel-button:hover {
+        background-color: #c9302c;
+    }
+    .status {
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .status-pending { background-color: #f0ad4e; }
+    .status-confirmed { background-color: #5cb85c; }
+    .status-cancelled { background-color: #d9534f; }
+</style>
+
+<div class="subheader" style="background-image: url(/Resources/home_burger_subheader.jpg);">
+    <p class="text1" style="color:#eee3df; font-size: 60px; margin-top: 150px;">Admin Orders</p>
+</div>
+<div class="" style="background-color: whitesmoke; padding: 40px 20px;">
+    <h1 class="text1" style="font-size: 42px; margin-bottom: 30px; font-family: 'Arvo', serif; text-align: center;">Orders</h1>
+
+    <div class="container2" style="max-width: 1200px; margin: auto; padding-bottom: 100px;">
+        <table class="orders-table">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% orders.forEach(order => { %>
+                    <tr>
+                        <td><%= order._id %></td>
+                        <td><%= order.customerName %></td>
+                        <td>$<%= order.total.toFixed(2) %></td>
+                        <td>
+                            <span class="status status-<%= order.status.toLowerCase() %>">
+                                <%= order.status %>
+                            </span>
+                        </td>
+                        <td><%= order.createdAt.toLocaleDateString() %></td>
+                        <td>
+                            <% if (order.status === 'Pending') { %>
+                                <div style="margin-top: 0px; display: flex; align-items: center;">
+                                <a href="/admin/orders/confirm/<%= order._id %>" class="button confirm-button">Confirm</a>
+                                <a href="/admin/orders/cancel/<%= order._id %>" class="button cancel-button">Cancel</a>
+                                </div>
+                            <% } %>
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</div>

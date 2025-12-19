@@ -1,0 +1,60 @@
+
+<div class="subheader" style="background-image: url(/Resources/home_burger_subheader.jpg);">
+    <p class="text1" style="color:#eee3df; font-size: 60px; margin-top: 150px;">Checkout</p>
+</div>
+<div class="" style="background-color: whitesmoke; padding: 20px;">
+    <h1 class="text1" style="font-size: 36px; margin-bottom: 20px; font-family: 'Arvo', serif; text-align: center;">Checkout</h1>
+
+    <div class="container2" style="padding-bottom: 100px;">
+        <div style="display: flex; justify-content: space-between;">
+            <div style="width: 60%;">
+                <h2 class="text1" style="font-size: 24px; margin-bottom: 20px;">Your Order</h2>
+                <table style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr>
+                            <th style="text-align: left; padding: 10px; border-bottom: 1px solid #ddd;">Product</th>
+                            <th style="text-align: left; padding: 10px; border-bottom: 1px solid #ddd;">Price</th>
+                            <th style="text-align: left; padding: 10px; border-bottom: 1px solid #ddd;">Quantity</th>
+                            <th style="text-align: left; padding: 10px; border-bottom: 1px solid #ddd;">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% let total = 0; %>
+                        <% cart.forEach(item => { %>
+                            <% total += item.price * item.quantity; %>
+                            <tr>
+                                <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+                                    <img src="/images/uploaded/<%= item.image %>" alt="<%= item.name %>" style="width: 50px; height: auto; margin-right: 10px;">
+                                    <%= item.name %>
+                                </td>
+                                <td style="padding: 10px; border-bottom: 1px solid #ddd;">$<%= item.price %></td>
+                                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><%= item.quantity %></td>
+                                <td style="padding: 10px; border-bottom: 1px solid #ddd;">$<%= (item.price * item.quantity).toFixed(2) %></td>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+                <div style="text-align: right; margin-top: 20px;">
+                    <h3 class="text1" style="font-size: 24px;">Total: $<%= total.toFixed(2) %></h3>
+                </div>
+            </div>
+            <div style="width: 35%;">
+                <h2 class="text1" style="font-size: 24px; margin-bottom: 20px;">Customer Information</h2>
+                <% if (typeof error !== 'undefined' && error) { %>
+                    <p style="color: red; margin-bottom: 10px;"><%= error %></p>
+                <% } %>
+                <form action="/order" method="post">
+                    <div style="margin-bottom: 15px;">
+                        <label for="customerName" style="display: block; margin-bottom: 5px;">Name</label>
+                        <input type="text" id="customerName" name="customerName" required style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <label for="email" style="display: block; margin-bottom: 5px;">Email</label>
+                        <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                    </div>
+                    <button type="submit" class="button" style="background-color: #5cb85c; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; width: 100%; border: none; cursor: pointer;">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

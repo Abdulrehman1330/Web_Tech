@@ -41,11 +41,25 @@
             </a>
           </li>
           <li>
+            <a href="/cart">
+              <link rel="stylesheet" href="" />
+              Cart <% if (session && session.cart && session.cart.length > 0) { %>(<%= session.cart.length %>) <% } %>
+            </a>
+          </li>
+          <li>
             <a href="/Burgers/products">
               <link rel="stylesheet" href="" />
               Admin
             </a>
           </li>
+          <% if (session && session.email === 'admin@shop.com') { %>
+          <li>
+            <a href="/admin/orders">
+              <link rel="stylesheet" href="" />
+              Orders
+            </a>
+          </li>
+          <% } %>
         </ul>
       </div>
     </div>
